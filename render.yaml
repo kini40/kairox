@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: kairox-server
+    runtime: node
+    rootDir: server
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: COINGECKO_API_KEY
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+    healthCheckPath: /api/health
+    autoDeploy: true

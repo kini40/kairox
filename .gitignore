@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Build outputs
+dist/
+*/dist/
+build/
+*/build/
+
+# Anchor / Rust build
+anchor/target/
+anchor/.anchor/
+*.so
+
+# Environment files — NEVER commit
+.env
+.env.local
+.env.*.local
+client/.env
+server/.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Keys / secrets — extra safety net
+*.pem
+*.key
+*.p12
+id.json
+keypair.json
+*private*key*
