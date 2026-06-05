@@ -4,5 +4,5 @@ COPY package*.json ./
 RUN npm install --legacy-peer-deps
 RUN npm install -g tsx
 COPY . .
-EXPOSE 4000
+EXPOSE ${PORT:-4000}
 CMD ["tsx", "src/index.ts"]
