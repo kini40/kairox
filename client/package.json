@@ -11,7 +11,10 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@noble/ed25519": "^2.1.0",
+    "@solana/wallet-adapter-backpack": "^0.1.0",
     "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-coinbase": "^0.1.0",
     "@solana/wallet-adapter-phantom": "^0.9.24",
     "@solana/wallet-adapter-react": "^0.15.35",
     "@solana/wallet-adapter-react-ui": "^0.9.35",
@@ -19,6 +22,7 @@
     "@solana/web3.js": "^1.91.8",
     "@supabase/supabase-js": "^2.43.4",
     "axios": "^1.7.2",
+    "bs58": "^5.0.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
     "framer-motion": "^11.2.12",
@@ -26,14 +30,11 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.0",
-    "socket.io-client": "^4.7.5",
-    "zustand": "^4.5.4",
     "recharts": "^2.12.7",
+    "rollup": "^4.61.1",
+    "socket.io-client": "^4.7.5",
     "tailwind-merge": "^2.3.0",
-    "@solana/wallet-adapter-backpack": "^0.1.0",
-    "@solana/wallet-adapter-coinbase": "^0.1.0",
-    "@noble/ed25519": "^2.1.0",
-    "bs58": "^5.0.0"
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
     "@types/node": "^20.14.9",
@@ -49,7 +50,7 @@
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.4.5",
-    "vite": "^5.3.1",
+    "vite": "^8.0.16",
     "vite-plugin-node-polyfills": "^0.21.0"
   }
 }
