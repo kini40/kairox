@@ -25,6 +25,8 @@ import { useGameEngine }        from '../hooks/useGameEngine'
 import { useRoundCountdown }    from '../hooks/useRoundCountdown'
 import { useDailyLogin }        from '../hooks/useDailyLogin'
 import { usePriceFeed }         from '../hooks/usePriceFeed'
+import { useWalletModal } from '@solana/wallet-adapter-react-ui';
+import { useWallet } from '@solana/wallet-adapter-react';
 
 // Quick bet amounts
 const QUICK_BETS = [10, 25, 50, 100, 250]
@@ -252,6 +254,8 @@ export default function GamePage() {
   const { priceHistory, currentPrice, previousPrice } = usePriceFeed()
 
   useDailyLogin(null)  // pass real userId when authenticated
+  const { setVisible } = useWalletModal();
+const { connected, publicKey } = useWallet();
 
   const { next: nextRank, threshold: nextXpThresh, progress: xpProgress } = nextRankInfo(s.xp)
 
@@ -305,6 +309,13 @@ export default function GamePage() {
           <button className="btn btn-outline-gold" style={{ fontSize: 12, padding: '7px 14px', gap: 6 }}>
             <Wallet size={13}/>Go Live
           </button>
+          <button
+  className="btn btn-outline-gold"
+  style={{ fontSize: 12, padding: '7px 14px', gap: 6 }}
+  onClick={() => setVisible(true)}
+>
+  <Wallet size={13}/>{connected ? publicKey?.toString().slice(0,4)+'...' : 'Connect Wallet'}
+</button>
         </div>
       </header>
 
