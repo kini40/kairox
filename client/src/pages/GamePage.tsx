@@ -261,7 +261,7 @@ const { connected, publicKey } = useWallet();
 
   return (
     <div style={{
-      minHeight: '100dvh', background: 'var(--bg-deep)',
+      minHeight: '100dvh', background: 'linear-gradient(125deg, #0D0F1A, #0d1117, #0a0a1f, #0D0F1A)',
       backgroundSize: '400% 400%',
 
       display: 'flex', flexDirection: 'column',
