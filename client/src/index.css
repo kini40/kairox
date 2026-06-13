@@ -43,7 +43,9 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--bg-deep);
+  background: linear-gradient(125deg, #0D0F1A, #0d1117, #0a0a1f, #0D0F1A);
+background-size: 400% 400%;
+animation: bgShift 15s ease infinite;
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -346,10 +348,5 @@ body {
   100% { background-position: 200% center; }
 }
 
-/* Animated moving background */
-body {
-  background: linear-gradient(125deg, #0D0F1A 0%, #0d1117 40%, #0a0a1f 70%, #0D0F1A 100%);
-  background-size: 400% 400%;
-  animation: bgShift 15s ease infinite;
-}
+
 
