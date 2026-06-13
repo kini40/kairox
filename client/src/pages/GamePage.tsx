@@ -262,6 +262,8 @@ const { connected, publicKey } = useWallet();
   return (
     <div style={{
       minHeight: '100dvh', background: 'var(--bg-deep)',
+      backgroundSize: '400% 400%',
+
       display: 'flex', flexDirection: 'column',
       animation: s.lastResult?.streakBroken ? 'screenShake 0.6s ease-in-out' : 'none',
     }}>
